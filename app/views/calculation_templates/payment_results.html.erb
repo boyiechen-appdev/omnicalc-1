@@ -4,7 +4,8 @@
     APR
   </dt>
   <dd>
-    <%= @apr %> %
+    <%= (@apr*100).to_s(:percentage, {:precision => 4}) %>
+
   </dd>
 
   <dt>
@@ -27,6 +28,6 @@
     Payment
   </dt>
   <dd>
-    $<%= @result %>
+    <%= @result.to_s(:currency, { :precision => 2 }) %>
   </dd>
 </dl>
